@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="24b17b5b-b18b-4baa-93f4-c00e8fca7ede" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Users\ojohnson\Desktop\TrackWSSample\TrackWSSample\Web References\TrackWebReference\Track.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Error1.xsd" MetadataType="Schema" ID="3da10c0f-574d-460d-b6f8-4ddfc241b02e" SourceId="1" SourceUrl="file:///C:/Users/ojohnson/Desktop/TrackWSSample/TrackWSSample/Web References/TrackWebReference/Error1.1.xsd" />
+    <MetadataFile FileName="UPSSecurity.xsd" MetadataType="Schema" ID="292c6a20-5012-40df-8ec0-83e4399fe782" SourceId="1" SourceUrl="file:///C:/Users/ojohnson/Desktop/TrackWSSample/TrackWSSample/Web References/TrackWebReference/UPSSecurity.xsd" />
+    <MetadataFile FileName="TrackWebServiceSchema.xsd" MetadataType="Schema" ID="9429ebd3-b0de-4df1-b1a9-aac0dc6ecff6" SourceId="1" SourceUrl="file:///C:/Users/ojohnson/Desktop/TrackWSSample/TrackWSSample/Web References/TrackWebReference/TrackWebServiceSchema.xsd" />
+    <MetadataFile FileName="Track.wsdl" MetadataType="Wsdl" ID="bc176394-a67e-42cc-aca6-b3dc6108042b" SourceId="1" SourceUrl="file:///C:/Users/ojohnson/Desktop/TrackWSSample/TrackWSSample/Web References/TrackWebReference/Track.wsdl" />
+    <MetadataFile FileName="common.xsd" MetadataType="Schema" ID="fe8df0c6-7544-4f26-a440-7d11d3c864a3" SourceId="1" SourceUrl="file:///C:/Users/ojohnson/Desktop/TrackWSSample/TrackWSSample/Web References/TrackWebReference/common.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

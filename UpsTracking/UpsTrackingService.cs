@@ -35,6 +35,7 @@ namespace UpsTracking
             SecurityToken = new TrackWS.UPSSecurity { ServiceAccessToken = new UPSSecurityServiceAccessToken { AccessLicenseNumber = upsApiKey }, UsernameToken = new UPSSecurityUsernameToken { Username = upsUserName, Password = upsPassword } };
             TrackingOption = "02";
             RequestOption = "1";
+            RateLimiting = true;
             Client = new TrackPortTypeClient("TrackPort");
         }
 
@@ -43,13 +44,15 @@ namespace UpsTracking
             return new DateTime(Int32.Parse(string.Concat(upsDate.Take(4))), Int32.Parse(string.Concat(upsDate.Skip(4).Take(2))), Int32.Parse(string.Concat(upsDate.Skip(6).Take(2))));
         }
 
-        public IEnumerable<TrackingInfo> GetTrackingInfo(params string[] trackingNumbers)
+        public IEnumerable<TrackingInfo> GetTrackingInfo(IEnumerable<string> trackingNumbers)
         {
             return trackingNumbers.Select(
                 number =>
                 {
                     try
                     {
+                        if (RateLimiting) Thread.Sleep(300); //Artificial Rate Limiting. UPS doesn't like more than 2000 requests per hour.
+
                         var data = Client.ProcessTrack(SecurityToken, new TrackRequest
                         {
                             InquiryNumber = number,
@@ -70,5 +73,7 @@ namespace UpsTracking
                     }
                 });
         }
+
+        public bool RateLimiting { get; set; }
     }
 }
